@@ -1,0 +1,6 @@
+header a {cursor:pointer;}
+.post blockquote .q-right,
+.post blockquote .q-left {
+	zoom:1;
+	display:inline;
+}
