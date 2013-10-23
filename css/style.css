@@ -185,19 +185,34 @@ header .twitter{
   color:#949bb2;
 }
 
-.post .actions{ margin: 0 2px 0 0;  padding:0;  list-style:none;
-  float:right;}.post .actions li{ float:left;
-  margin-left:17px;}.post .actions a{ display:block;
+.post .actions {
+  margin: 0 2px 0 0;
+  padding:0;
+  list-style:none;
+  float:right;
+}
+
+.post .actions li {
+  float:left;
+  margin-left:17px;
+}
+
+/*
+.post .actions a {
+  display:block;
   text-indent:-9999px;
   width:22px;
   height:22px;
 }
+
 .post .actions .retweet{background:url(../images/ico-post-actions.png) no-repeat -25px -22px;}
 .post .actions .retweet:hover{background:url(../images/ico-post-actions.png) no-repeat  0 -22px;}
 .post .actions .like{background:url(../images/ico-post-actions.png) no-repeat -25px 0;}
 .post .actions .like:hover{background:url(../images/ico-post-actions.png) no-repeat;}
 .post .actions .like:visited,
 .post .actions .liked{background:url(../images/ico-post-actions.png) no-repeat -50px 0;}
+
+*/
 /*blockquote*/
 .post blockquote{margin:0 0 18px;}
 .post blockquote q{
@@ -264,26 +279,26 @@ footer .sub-nav{  margin:0; padding:0;  list-style:none;
 footer .sub-nav li:first-child{margin-left:0;}footer .sub-nav a{color:#8d93a6;}
 footer .sub-nav li:active, footer .sub-nav li:hover a{color:#8d93a6;}
 /* tooltip */
-.qtip{
+.qtip {
   position: absolute;
   left: -28000px;
   top: -28000px;
   display: none;
   max-width: 240px;
   min-width: 200px;
-  font-size:10px;
+  font-size:12px;
   line-height:16px;
   color: #fff;
   margin-left:10px;
 }
-.qtip-content{
+.qtip-content {
   position: relative;
   overflow: hidden;
   word-wrap: break-word;
   padding:15px;
   background:#fff;
   color:#444355;
-  font-size:10px;
+  font-size:12px;
   line-height:16px;
   box-shadow:0 0 0 2px rgba(0,0,0,0.1);
   -moz-box-shadow:0 0 0 2px rgba(0,0,0,0.1);
@@ -292,7 +307,7 @@ footer .sub-nav li:active, footer .sub-nav li:hover a{color:#8d93a6;}
   -moz-border-radius:4px;
   border-radius:4px;
 }
-.qtip-content ul{
+.qtip-content ol{
   margin:0;
   padding:0;
   list-style:none;
@@ -307,13 +322,13 @@ footer .sub-nav li:active, footer .sub-nav li:hover a{color:#8d93a6;}
   margin-top:0;
   padding-top:0;
 }
-.qtip-content img{
+.qtip-content img {
   vertical-align:middle;
   width:16px;
   height:16px;
   padding-right:10px;
 }
-.qtip-content  a{
+.qtip-content a {
   color:#101010;
   text-decoration:underline;
 }

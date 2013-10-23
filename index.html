@@ -63,7 +63,7 @@
             {/block:Quote}
 
             <div class="meta">
-              <strong class="published">{block:Date}{DayOfMonth}{DayOfMonthSuffix} {ShortMonth} {Year}{/block:Date}{block:PostNotes} - <a class="tooltip notes" title="{PostNotes-16}" href="javascript:;">{NoteCountWithLabel}</a>{/block:PostNotes}
+              <strong class="published">{block:Date}{DayOfMonth}{DayOfMonthSuffix} {ShortMonth} {Year}{/block:Date}{block:PostNotes} - <a class="tooltip notes" title='{PostNotes-16}' href="javascript:;">{NoteCountWithLabel}</a>{/block:PostNotes}
               </strong><!-- / published -->
               <ul class="actions">
                 <li>{ReblogButton color="White"}</li>
@@ -87,10 +87,10 @@
       </article><!-- / content -->
       <aside>
         <h3>About Us</h3>
-        <p>We build wonderful  things for Mobile &amp; Web. Whether you’re selling products or telling stories, we can help you do more of it.</p>
-        <h3>Latest Tweets</h3>
+        <p>{Description}</p>
 
         {block:Twitter}
+        <h3>Latest Tweets</h3>
         <div id="twitter" style="display:none">
           <ul class="tweets" id="tweets"> 
           </ul><!-- / tweets -->
@@ -140,7 +140,7 @@
             };
 
               function recent_tweets(data) {
-                  for (i=0; i<data.length; i++) {
+                  for (i=0; i<Math.min(data.length, 5); i++) {
                     var tweet = data[i];
                     var day = moment(tweet.created_at);
                       document.getElementById("tweets").innerHTML =
@@ -157,17 +157,18 @@
       </aside><!-- / aside -->
     </div><!-- / main -->
     <footer>
-      <strong class="logo"><a href="#">Lionheart Software</a></strong>
+      <strong class="logo"><a href="http://lionheartsw.com/">Lionheart Software</a></strong>
+      <!--
       <ul class="sub-nav">
         <li><a href="#">Projects</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
-      </ul>
+      </ul> -->
     </footer><!-- / footer -->
   </div><!-- / wrapper -->
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
+<script src="https://s3.amazonaws.com/lionheart-tumblr/js/plugins.js"></script>
+<script src="https://s3.amazonaws.com/lionheart-tumblr/js/script.js"></script>
 {block:Twitter}
     <script type="text/javascript" src="/tweets.js"></script>
 {/block:Twitter}
