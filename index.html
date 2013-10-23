@@ -1,182 +1,159 @@
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js">
+<!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Lionheart Software</title>
-  <meta name="description" content="">
+  <title>{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
+	<meta name="Description" content="{MetaDescription}" />
+
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/libs/modernizr-2.5.3.min.js"></script>
-  <script src="js/libs/jquery-1.7.2.min.js"></script>
-  <!--[if lt IE 9]><link rel="stylesheet" media="all" type="text/css" href="css/ie.css" /><![endif]-->
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <style type="text/css">{CustomCSS}</style>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/lionheart-tumblr/css/style.css" />
+  <script src="https://s3.amazonaws.com/lionheart-tumblr/js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="https://s3.amazonaws.com/lionheart-tumblr/js/libs/jquery-1.7.2.min.js"></script>
+  <script src="https://s3.amazonaws.com/lionheart-tumblr/js/libs/moment.min.js"></script>
+  <!--[if lt IE 9]><link rel="stylesheet" media="all" type="text/css" href="https://s3.amazonaws.com/lionheart-tumblr/css/ie.css" /><![endif]-->
 </head>
 <body>
   <div id="wrapper">
     <header>
-      <a href="#">
-      <strong class="logo">LH</strong>
-      <strong class="logo-txt">Lionheart Software</strong>
+      <a href="/">
+        <strong class="logo">LH</strong>
+        <strong class="logo-txt">{Title}</strong>
       </a>
-      <a class="twitter" href="#">twitter</a>
+      {block:Twitter}<a class="twitter" href="https://twitter.com/{TwitterUsername}">twitter</a>{/block:Twitter}
     </header>
     <div id="main">
       <article id="content">
-        <section class="post">
-          <div class="visual">
-            <img src="images/img-01.jpg" alt="image" width="520" height="400" >
-          </div>
-          <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
-          <span class="by">by
-            <a href="#" class="author">Martin Karasek</a>
-          </span><!-- / by -->
-          <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
-          <div class="meta">
-            <strong class="published">9th Oct 2013 - 
-              <a class="tooltip notes" 
-                title=
-                  "<ul>
-                  <li> <img src='images/img-user01.gif' alt='image'>
-                    <a href='#'>morganpolotan</a>
-                    likes this                  
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                </ul>"
-              href="#" >10 notes</a>
-            </strong><!-- / published -->
-            <ul class="actions">
-              <li><a class="retweet" href="#"></a></li>
-              <li><a class="like" href="#"></a></li>
-            </ul><!-- / actions -->
-          </div><!-- / meta -->
-        </section><!-- / post -->
-        <section class="post">
-          <blockquote>
-            <q><span class="q-left"></span>You must make a decision that you are going to move on. It wont happen automatically. You will have to rise up and say, ‘I don’t care how hard this is, I don’t care how disappointed I am, I’m not going to let this get the best of me. I’m moving on with my life.<span class="q-right"></span></q>
-            <cite>— Joel Osteen (via <a href="#">thevoicesinsideher</a>)</cite>
-          </blockquote>
-          <div class="meta">
-            <strong class="published">9th Oct 2013 - 
-              <a class="tooltip notes" 
-                title=
-                  "<ul>
-                  <li> <img src='images/img-user01.gif' alt='image'>
-                    <a href='#'>morganpolotan</a>
-                    likes this                  
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                </ul>"
-              href="#" >10 notes</a>
-            </strong><!-- / published -->
-            <ul class="actions">
-              <li><a class="retweet" href="#"></a></li>
-              <li><a class="liked" href="#"></a></li>
-            </ul><!-- / actions -->
-          </div><!-- / meta -->
-        </section><!-- / post -->
-        <section class="post">
-          <h2>Code that sh*t</h2>
-          <div class="visual">
-            <img src="images/img-02.png" alt="image" width="520" height="168" >
-          </div>
-          <div class="meta">
-            <strong class="published">9th Oct 2013 - 
-              <a class="tooltip notes" 
-                title=
-                  "<ul>
-                  <li> <img src='images/img-user01.gif' alt='image'>
-                    <a href='#'>morganpolotan</a>
-                    likes this                  
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                </ul>"
-              href="#" >10 notes</a>
-            </strong><!-- / published -->
-            <ul class="actions">
-              <li><a class="retweet" href="#"></a></li>
-              <li><a class="like" href="#"></a></li>
-            </ul><!-- / actions -->
-          </div><!-- / meta -->
-        </section><!-- / post -->
-        <section class="post">
-          <div class="visual">
-            <img src="images/img-03.jpg" alt="image" width="520" height="280" >
-          </div>
-          <h2>Glow-in-the-dark stick-on stars.</h2>
-          <div class="meta">
-            <strong class="published">9th Oct 2013 - 
-              <a class="tooltip notes" 
-                title=
-                  "<ul>
-                  <li> <img src='images/img-user01.gif' alt='image'>
-                    <a href='#'>morganpolotan</a>
-                    likes this                  
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                  <li>
-                    <img src='images/img-user02.gif' alt='image'>
-                    <a href='#'>thinkfullfiled</a>
-                    posted this
-                  </li>
-                </ul>"
-              href="#" >10 notes</a>
-            </strong><!-- / published -->
-            <ul class="actions">
-              <li><a class="retweet" href="#"></a></li>
-              <li><a class="like" href="#"></a></li>
-            </ul><!-- / actions -->
-          </div><!-- / meta -->
-        </section><!-- / post -->
+        {block:Posts}
+          <section class="post">
+            {block:Title}
+              <h2><a href='{Permalink}'>{Title}</a></h2>
+            {/block:Title}
+
+            <span class="by">by
+              <a href="{PostAuthorURL}" class="author">{PostAuthorName}</a>
+            </span><!-- / by -->
+
+            {block:Text}
+              {Body}
+            {/block:Text}
+
+            {block:Photo}
+              <div class="visual">
+                <img src="{PhotoURL-500}" alt="image" width="520" height="400" >
+              </div>
+            {/block:Photo}
+
+            {block:Quote}
+              <blockquote>
+                <q><span class="q-left"></span>{Quote}<span class="q-right"></span></q>
+                <cite>{block:Source}— {Source} {/block:Source}{block:RebloggedFrom}(via <a href="{ReblogParentURL}">{ReblogParentName}</a>){/block:RebloggedFrom}</cite>
+              </blockquote>
+            {/block:Quote}
+
+            <div class="meta">
+              <strong class="published">{block:Date}{DayOfMonth}{DayOfMonthSuffix} {ShortMonth} {Year}{/block:Date}{block:PostNotes} - <a class="tooltip notes" title="{PostNotes-16}" href="javascript:;">{NoteCountWithLabel}</a>{/block:PostNotes}
+              </strong><!-- / published -->
+              <ul class="actions">
+                <li>{ReblogButton color="White"}</li>
+                <li>{LikeButton color="White"}</li>
+              </ul><!-- / actions -->
+            </div><!-- / meta -->
+          </section><!-- / post -->
+        {/block:Posts}
+
         <div class="posts-pager">
-          <a class="prev" href="#">Newer</a>
-          <a class="next" href="#">Older</a>
+          {block:Pagination}
+              {block:PreviousPage}
+                  <a class="prev" href="{PreviousPage}">Newer</a>
+              {/block:PreviousPage}
+
+              {block:NextPage}
+                  <a class="next" href="{NextPage}">Older</a>
+              {/block:NextPage}
+          {/block:Pagination}
         </div><!-- / posts-pager -->
       </article><!-- / content -->
       <aside>
         <h3>About Us</h3>
         <p>We build wonderful  things for Mobile &amp; Web. Whether you’re selling products or telling stories, we can help you do more of it.</p>
         <h3>Latest Tweets</h3>
-        <ul class="tweets">
-          <li>@daveyhauser App Store Marketing Guidelines - Apple Developer <a href="https://t.co/L0Ztlbc538">https://t.co/L0Ztlbc538</a></li>
-          <li>@offscreenmagazine Thanks so much coming out to my talk at @harvest last night! Did anyone take a few good shots I could use for the blog?</li>
-          <li>@daveyhauser App Store Marketing Guidelines - Apple Developer <a href="https://t.co/L0Ztlbc538">https://t.co/L0Ztlbc538</a></li>
-          <li>@offscreenmagazine Thanks so much coming out to my talk at @harvest last night! Did anyone take a few good shots I could use for the blog?</li>
-          <li>@daveyhauser App Store Marketing Guidelines - Apple Developer <a href="https://t.co/L0Ztlbc538">https://t.co/L0Ztlbc538</a></li>
-        </ul><!-- / tweets -->
+
+        {block:Twitter}
+        <div id="twitter" style="display:none">
+          <ul class="tweets" id="tweets"> 
+          </ul><!-- / tweets -->
+        </div>
+
+          <script type="text/javascript">
+            var linkify_result = function (tweet) {
+              var subs = [], 
+              last_offset = 0,
+              new_tweet = '', 
+              entity,
+              replace = { 
+                hashtags: function (text) {
+                  return '<a href="https://twitter.com/search?q=%23' + text + '">#' + text + '</a>';
+                },  
+                media: function (text) {
+                  return '<a href="' + text[0] + '">' + text[1] + '</a>';
+                },  
+                urls: function (text) {
+                  return '<a href="' + text[0] + '">' + text[1] + '</a>';
+                },  
+                user_mentions: function (text) {
+                  return '<a href="https://twitter.com/' + text + '">@' + text + '</a>';
+                }   
+              };  
+              for (entity in tweet.entities) {
+                tweet.entities[entity].forEach(function (d, i) {
+                  subs.push([
+                            entity,
+                            d.indices,
+                            d.text ? d.text :
+                              d.display_url ? [d.url, d.display_url] :
+                              d.screen_name
+                  ]); 
+                }); 
+              }   
+              subs.sort(function (a, b) {
+                return a[1][0] - b[1][0];
+              }); 
+              subs.forEach(function (d, i) {
+                new_tweet += tweet.text.slice(last_offset, d[1][0]);
+                new_tweet += replace[d[0]](d[2]);
+                last_offset = d[1][1];
+              }); 
+              new_tweet += tweet.text.slice(last_offset);
+              return new_tweet;
+            };
+
+              function recent_tweets(data) {
+                  for (i=0; i<data.length; i++) {
+                    var tweet = data[i];
+                    var day = moment(tweet.created_at);
+                      document.getElementById("tweets").innerHTML =
+                          document.getElementById("tweets").innerHTML +
+                          '<li>' + linkify_result(tweet) +
+                          ' <a href="http://twitter.com/{TwitterUsername}/status/' +
+                          (data[i].id_str ? data[i].id_str : data[i].id) +
+                            '">' + day.fromNow() + '</a></li>';
+                  }
+                  document.getElementById("twitter").style.display = 'block';
+              }
+          </script>
+        {/block:Twitter}
       </aside><!-- / aside -->
     </div><!-- / main -->
     <footer>
@@ -191,6 +168,9 @@
 
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
+{block:Twitter}
+    <script type="text/javascript" src="/tweets.js"></script>
+{/block:Twitter}
 
 </body>
 </html>
