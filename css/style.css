@@ -264,9 +264,10 @@ aside a{color:#a4abc3;}
 aside p{margin:6px 0 38px;}
 aside h3 {
   color: #fff;
+  font-weight: normal;
 }
 /* tweets */
-.tweets{  margin:0; padding:0;  list-style:none;
+.tweets{  margin:6px 0 0 0; padding:0;  list-style:none;
   line-height:22px;}.tweets li{padding-bottom:22px;}/* footer */
 footer {
   padding:47px 0 42px;
