@@ -184,6 +184,9 @@ header .twitter{
 .post .published a {
   color:#949bb2;
 }
+.post .published a:hover {
+  color:#fff;
+}
 .post .published .notes{
   color:#949bb2;
 }
