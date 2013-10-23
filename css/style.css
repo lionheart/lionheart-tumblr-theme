@@ -295,7 +295,7 @@ footer .sub-nav li:active, footer .sub-nav li:hover a{color:#8d93a6;}
   position: relative;
   overflow: hidden;
   word-wrap: break-word;
-  padding:15px;
+  padding:8px;
   background:#fff;
   color:#444355;
   font-size:12px;
@@ -313,8 +313,8 @@ footer .sub-nav li:active, footer .sub-nav li:hover a{color:#8d93a6;}
   list-style:none;
 }
 .qtip-content li{
-  padding-top:14px;
-  margin-top:15px;
+  padding-top:7px;
+  margin-top:8px;
   border-top:1px solid #ddd;
 }
 .qtip-content li:first-child{ 
