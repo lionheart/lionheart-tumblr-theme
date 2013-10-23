@@ -94,30 +94,30 @@
         {block:Twitter}
         <h3>Latest Tweets</h3>
         <div id="twitter" style="display:none">
-          <ul class="tweets" id="tweets"> 
+          <ul class="tweets" id="tweets">
           </ul><!-- / tweets -->
         </div>
 
           <script type="text/javascript">
             var linkify_result = function (tweet) {
-              var subs = [], 
+              var subs = [],
               last_offset = 0,
-              new_tweet = '', 
+              new_tweet = '',
               entity,
-              replace = { 
+              replace = {
                 hashtags: function (text) {
                   return '<a href="https://twitter.com/search?q=%23' + text + '">#' + text + '</a>';
-                },  
+                },
                 media: function (text) {
                   return '<a href="' + text[0] + '">' + text[1] + '</a>';
-                },  
+                },
                 urls: function (text) {
                   return '<a href="' + text[0] + '">' + text[1] + '</a>';
-                },  
+                },
                 user_mentions: function (text) {
                   return '<a href="https://twitter.com/' + text + '">@' + text + '</a>';
-                }   
-              };  
+                }
+              };
               for (entity in tweet.entities) {
                 tweet.entities[entity].forEach(function (d, i) {
                   subs.push([
@@ -126,17 +126,17 @@
                             d.text ? d.text :
                               d.display_url ? [d.url, d.display_url] :
                               d.screen_name
-                  ]); 
-                }); 
-              }   
+                  ]);
+                });
+              }
               subs.sort(function (a, b) {
                 return a[1][0] - b[1][0];
-              }); 
+              });
               subs.forEach(function (d, i) {
                 new_tweet += tweet.text.slice(last_offset, d[1][0]);
                 new_tweet += replace[d[0]](d[2]);
                 last_offset = d[1][1];
-              }); 
+              });
               new_tweet += tweet.text.slice(last_offset);
               return new_tweet;
             };
