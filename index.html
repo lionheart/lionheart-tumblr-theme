@@ -42,6 +42,11 @@
             {block:Title}
               <h2><a href='{Permalink}'>{Title}</a></h2>
             {/block:Title}
+            {block:Photo}
+              {block:Caption}
+                <h2><a href='{Permalink}'>{Caption}</a></h2>
+              {/block:Caption}
+            {/block:Photo}
 
             <span class="by">by
               <a href="{PostAuthorURL}" class="author">{PostAuthorName}</a>
@@ -53,7 +58,7 @@
 
             {block:Photo}
               <div class="visual">
-                <img src="{PhotoURL-500}" alt="image" width="520" height="400" >
+                <a href='{block:HighRes}{PhotoURL-HighRes}{/block:HighRes}'><img src="{PhotoURL-500}" alt="{PhotoAlt}"></a>
               </div>
             {/block:Photo}
 
@@ -65,7 +70,7 @@
             {/block:Quote}
 
             <div class="meta">
-              <strong class="published">{block:Date}{DayOfMonth}{DayOfMonthSuffix} {ShortMonth} {Year}{/block:Date}{block:PostNotes} - <a class="tooltip notes" title='{PostNotes-16}' href="javascript:;">{NoteCountWithLabel}</a>{/block:PostNotes}
+              <strong class="published"><a href='{Permalink}'>{block:Date}{DayOfMonth}{DayOfMonthSuffix} {ShortMonth} {Year}</a>{/block:Date}{block:PostNotes} - <a class="tooltip notes" title='{PostNotes-16}' href="javascript:;">{NoteCountWithLabel}</a>{/block:PostNotes}
               </strong><!-- / published -->
               <ul class="actions">
                 <li>{ReblogButton color="White"}</li>
