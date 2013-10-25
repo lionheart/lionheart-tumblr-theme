@@ -220,12 +220,24 @@ header .twitter{
 
 */
 /*blockquote*/
-.post blockquote{margin:0 0 18px;}
-.post blockquote q{
+
+.post blockquote {
+  border-left: 3px solid #ddd;
+  color: #ddd;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+.post blockquote.single-quote {
+  margin:0 0 18px;
+}
+
+.post blockquote q {
   display:block;
   font:22px/28px 'noto_serifregular', Georgia, serif;
   padding-bottom:24px;
 }
+
 .post blockquote cite{
   display:block;
   font-size:14px;

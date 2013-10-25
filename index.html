@@ -63,7 +63,7 @@
             {/block:Photo}
 
             {block:Quote}
-              <blockquote>
+              <blockquote class="single-quote">
                 <q><span class="q-left"></span>{Quote}<span class="q-right"></span></q>
                 <cite>{block:Source}— {Source} {/block:Source}{block:RebloggedFrom}(via <a href="{ReblogParentURL}">{ReblogParentName}</a>){/block:RebloggedFrom}</cite>
               </blockquote>
@@ -147,7 +147,7 @@
             };
 
               function recent_tweets(data) {
-                  for (i=0; i<Math.min(data.length, 5); i++) {
+                  for (i=0; i<Math.min(data.length, 10); i++) {
                     var tweet = data[i];
                     var day = moment(tweet.created_at);
                       document.getElementById("tweets").innerHTML =
